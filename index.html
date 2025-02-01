@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório Web</title>
+    <!-- Link para o Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link para o Bootstrap e seus ícones -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: 'Roboto', sans-serif; /* Fonte principal */
+            text-align: center;
+            margin: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 90%;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif; /* Fonte para os títulos */
+            color: #4CAF50;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif; /* Fonte para os parágrafos */
+        }
+
+        #file-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .file-item {
+            margin: 5px 0;
+            padding: 5px;
+            background: #333;
+            border-radius: 5px;
+        }
+
+        .developer-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .developer-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .developer-info p {
+            margin: 10px 0;
+        }
+
+        .developer-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .developer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .developer-info .social-links {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .developer-info .social-links a {
+            margin: 0 10px;
+            color: white;
+        }
+
+        .developer-info .social-links a:hover {
+            color: #76FF03;
+        }
+
+        .repo-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .repo-item {
+            margin: 5px 0;
+            padding: 5px;
+            background: #333;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button:hover {
+            background-color: #388E3C;
+        }
+
+        input[type="file"] {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+}
+
+h1 {
+                font-size: 1.2em;
+            }
+            .container, .developer-info {
+                padding: 15px;
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header d-flex align-items-center justify-content-center">
+            <img src="img.jpeg" alt="Foto de Kelvin Camargo" class="profile-pic">
+            <br>
+            <h2 class="ms-3">Repositório de Projetos Web e Local - Kelvin Camargo</h2>
+        </div>
+                <p>Bem-vindo ao meu repositório de projetos web e local! Este espaço contém uma coleção de trabalhos e projetos que desenvolvi ao longo da minha jornada como desenvolvedor. Aqui, você encontrará uma variedade de aplicações e soluções que demonstram minhas habilidades em diferentes tecnologias.
+
+        </p>
+        <h2>Sobre Este Repositório</h2>
+        <p>Este repositório inclui projetos que abordam diferentes aspectos do 
+            desenvolvimento web e local, como a criação de sites responsivos, aplicações dinâmicas
+             com JavaScript, integração com APIs, e muito mais. Meu objetivo é compartilhar 
+             essas experiências para aprender, colaborar e mostrar o que sou capaz de fazer.
+
+
+        </p>
+       
+        <h2>Projetos no GitHub</h2>
+        <div id="repo-list" class="repo-list"></div>
+
+        <div class="developer-info">
+            <h2>Sobre o Desenvolvedor</h2>
+            <p><strong>Nome:</strong> Kelvin Camargo</p>
+            <p><strong>Email:</strong> kelvincamargo056@email.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/kelvincamargo" target="_blank">github.com/kelvincamargo</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kelvincamargo" target="_blank" title="LinkedIn">
+                    <i class="bi bi-linkedin" style="font-size: 30px; color: white;"></i>
+                </a>
+                <a href="https://twitter.com/kelvincamargo" target="_blank" title="Twitter">
+                    <i class="bi bi-twitter" style="font-size: 30px; color: white;"></i>
+                </a>
+                <a href="mailto:kelvincamargo056@email.com" target="_blank" title="Email">
+                    <i class="bi bi-envelope" style="font-size: 30px; color: white;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os repositórios do GitHub
+        async function loadGitHubRepos() {
+            const user = 'kelvincamargo'; // Substitua pelo seu nome de usuário do GitHub
+            const repoList = document.getElementById('repo-list');
+            try {
+                const response = await fetch(`https://api.github.com/users/${user}/repos`);
+                const repos = await response.json();
+                if (repos.length === 0) {
+                    repoList.innerHTML = '<p>Nenhum repositório encontrado.</p>';
+                    return;
+                }
+                repos.forEach(repo => {
+                    const repoItem = document.createElement('div');
+                    repoItem.className = 'repo-item';
+                    const repoLink = document.createElement('a');
+                    repoLink.href = repo.html_url;
+                    repoLink.target = '_blank';
+                    repoLink.textContent = repo.name;
+                    repoItem.appendChild(repoLink);
+                    repoList.appendChild(repoItem);
+                });
+            } catch (error) {
+                repoList.innerHTML = '<p>Erro ao carregar repositórios do GitHub.</p>';
+            }
+        }
+
+        // Função para enviar arquivos
+        function uploadFile() {
+            const fileInput = document.getElementById('file-input');
+            const fileList = document.getElementById('file-list');
+            
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.textContent = file.name;
+                fileList.appendChild(fileItem);
+            } else {
+                alert('Selecione um arquivo primeiro!');
+            }
+        }
+
+        // Carregar os repositórios do GitHub ao carregar a página
+        window.onload = loadGitHubRepos;
+    </script>
+
+    <!-- Link para o JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
